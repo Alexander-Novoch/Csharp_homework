@@ -21,7 +21,7 @@ void Fill2DArray(double[,] numbers, int m, int n)
 {
     for (int i = 0; i < m; i++)
         for (int j = 0; j < n; j++)
-            numbers[i, j] = new Random().Next(-10, 11);
+            numbers[i, j] = Math.Round(new Random().NextDouble() + new Random().Next(-10, 11), 1);
 }
 
 void Print2DArray(double[,] numbers, int m, int n)
@@ -30,7 +30,7 @@ void Print2DArray(double[,] numbers, int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            Console.Write($"{numbers[i, j],3} ");
+            Console.Write($"{numbers[i, j],5} ");
         }
         Console.WriteLine();
     }
