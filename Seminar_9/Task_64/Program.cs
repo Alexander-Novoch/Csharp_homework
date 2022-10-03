@@ -2,3 +2,15 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+Console.Write("Введите натуральное число N: ");
+int n = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine(GetNaturalNumbersInReverse(n));
+
+string GetNaturalNumbersInReverse(int n)
+{
+    if (n == 1)
+        return "1";
+    else
+        return n + ", " + GetNaturalNumbersInReverse(n - 1);
+}
